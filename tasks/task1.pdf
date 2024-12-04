@@ -1,0 +1,4 @@
+
+nums = [-2,-1,1]
+num = sorted(nums, key=lambda x: (abs(x), -x))[0]
+print(num)

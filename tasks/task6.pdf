@@ -1,0 +1,18 @@
+
+def longest_common_prefix(strs):
+    if not strs:
+        return ""
+    
+    # Start with the first string as the prefix
+    prefix = strs[0]
+    for string in strs[1:]:
+        while not string.startswith(prefix):
+            # Reduce the prefix by one character from the end
+            prefix = prefix[:-1]
+            if prefix == "":
+                return ""
+    return prefix
+
+# Example usage:
+print(longest_common_prefix(["flower", "flow", "flight"]))  # Output: "fl"
+print(longest_common_prefix(["dog", "racecar", "car"]))     # Output: ""
